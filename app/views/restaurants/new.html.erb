@@ -1,0 +1,8 @@
+<h1>Fill this form to create a new restaurant</h1>
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name, label: "Nom du restaurant" %>
+  <%= f.input :address, label: "Adresse du restaurant" %>
+  <%= f.input :phone_number, label: "Numéro de téléphone" %>
+  <%= f.input :category, label: "Type de cuisine", collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
